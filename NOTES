@@ -1,0 +1,31 @@
+For input like: "What is problem with sentense?", output XML from AfterTheDeadline API is:-
+<results>
+	<error>
+		<string>sentense</string>
+		<description>Spelling</description>
+		<precontext>with</precontext>
+		<suggestions>
+			<option>sentence</option>
+		</suggestions>
+		<type>spelling</type>
+	</error>
+	<error>
+		<string>is problem with</string>
+		<description>Missing Word</description>
+		<precontext>what</precontext>	
+		<suggestions>
+			<option>is the problem with</option>
+			<option>is a problem with</option>
+		</suggestions>
+		<type>grammar</type>
+		<url>http://service.afterthedeadline.com/info.slp?text=is+problem+with&tags=VBZ%2FNN%2FIN&engine=1</url>
+	</error>
+</results>
+
+
+Information from URL (http://service.afterthedeadline.com/info.slp?text=is+problem+with&tags=VBZ%2FNN%2FIN&engine=1) is in format:-
+
+Try: "is the problem with" or "is a problem with"
+
+You're likely missing an article in this phrase. An article serves as a marker letting the reader know how many (or which) of the noun you're referring to.
+

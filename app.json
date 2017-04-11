@@ -1,0 +1,7 @@
+{
+  "name": "Grammar Checker",
+  "description": "Chatbot built using api.ai, deployed on Heroku.",
+  "image": "heroku/python",
+  "repository": "https://github.com/sid2364/apiai-grammarchecker",
+  "keywords": ["python", "chatbot", "grammar" ]
+}

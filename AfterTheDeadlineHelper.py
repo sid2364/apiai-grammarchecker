@@ -3,7 +3,7 @@ After The Deadline Helper Module
 
 Author: Siddharth Sahay
 """
-
+import random
 from bs4 import BeautifulSoup
 import urllib
 import requests
@@ -37,7 +37,7 @@ class Response:
 		self.errorCount = 0
 		self.xmlTree = xml.etree.ElementTree.fromstring(doc)
 		for error in self.xmlTree.findall(error_response):
-			key_t = error.tag + str(self.errorCount)
+			key_t = error_response + str(self.errorCount)
 			error_d = {}
 			for child in error:
 				if child.tag == suggestions_response:
@@ -105,9 +105,12 @@ def checkDocument(text, key=None):
 		atd_api_service + check_document_f + "?" + params).text)
 
 '''
-response = checkDocument('What are problem with sentense?')
-print(response.getErrorString(2))
-print(response.getSuggestions(2))
-print(response.getURLText(2))
+response = checkDocument('What is problem with sentense?')
+print(response.getErrorString(0))
+print(response.getSuggestions(0))
+print(response.getErrorString(1))
+print(response.getSuggestions(1))
+print(response.getURLText(0))
 print(response.getURLText(1))
 '''
+

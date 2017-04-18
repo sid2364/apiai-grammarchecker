@@ -2,4 +2,4 @@
 
 Chatbot built using api.ai to correct grammatical mistakes and suggest corrections.
 
-Link: https://bot.api.ai/wolfpack-grammarchecker
+https://bot.api.ai/wolfpack-grammarchecker

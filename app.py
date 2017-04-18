@@ -44,7 +44,7 @@ def getResponse(wrong_sentence):
 			return urltext
 	correct_rand = random.randint(0, response.errorCount-1)
 	reply = "There seems to be a problem with '"+response.getErrorString(correct_rand)+"'. "
-	reply += "Did you mean to say '"+("' or '".join(response.getSuggestions(correct_rand)))+"'."
+	reply += "Did you mean '"+("' or '".join(response.getSuggestions(correct_rand)))+"'?"
 	return reply
 
 

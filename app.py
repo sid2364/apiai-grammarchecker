@@ -9,7 +9,10 @@ import AfterTheDeadlineHelper as ATD
 
 app = Flask("apiai-grammarchecker")
 
-sentence = "What is problem with sentense?" # Incorrect grammar and spelling
+replies_no_error = ["There seems to be no problem with this!", \
+		"I think this is perfectly alright!", \
+		"I don't think there is any problem with what you have there!", \
+		"It's all correct!"]
 
 @app.route("/")
 def home():
@@ -36,7 +39,7 @@ def getWrongSentence(request):
 def getResponse(wrong_sentence):
 	response = ATD.checkDocument(wrong_sentence)
 	if response.errorCount == 0:
-		return "There seems to be no problem with this!"
+		return replies_no_error[random.randint(0, len(replies_no_errors)-1]
 
 	for e in range(response.errorCount):
 		urltext = response.getURLText(e)
